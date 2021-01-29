@@ -10,7 +10,6 @@
 
     &__container {
         display: grid;
-
         margin-bottom: $gap;
 
         @include lg-min {
@@ -60,8 +59,6 @@
             min-width: 350px;
         }
     }
-
-
 
 }
 
