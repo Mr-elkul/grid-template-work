@@ -91,31 +91,8 @@ a
     background-color: rgba($color-light, .1);
 
     @extend %btn-common;
-    //@include lg-min
-    //{
-    //    font-size: 1.125rem;
-    //
-    //    min-width: 250px;
-    //    height: 60px;
-    //    padding: 18px $gap;
-    //}
-    //@include lg-md
-    //{
-    //    font-size: 1.125rem;
-    //
-    //    min-width: 200px;
-    //    height: 50px;
-    //    padding: 14px $gap;
-    //}
 
-    //@include md
-    //{
-    //    min-width: 170px;
-    //    height: 40px;
-    //    padding: 9px $gap;
-    //}
 }
-
 .btn--accent {
     font-size: 1.125rem;
 
@@ -124,17 +101,6 @@ a
 
     border: 2px solid $color-primary;
     background-color: rgba($color-primary, .8);
-
-    //.skills__button,
-    //.posts__button,
-    //.btn--accent    {
-    //    @include sm {
-    //        width: 100%;
-    //    }
-    //    @include sm-min {
-    //        min-width: 350px;
-    //    }
-    //}
 
 
 }

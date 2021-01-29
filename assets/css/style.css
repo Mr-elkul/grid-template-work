@@ -277,17 +277,17 @@ html [type="button"],
   /* 2 */
 }
 
-/* button,
+button,
 [type="button"],
 [type="reset"],
-[type="submit"] { */
+[type="submit"] {
   /**
        * Remove the inner border and padding in Firefox.
        */
   /**
        * Restore the focus styles unset by the previous rule.
-       
-}*/
+       */
+}
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -533,7 +533,7 @@ header {
   padding: 100px 0;
   color: #ffffff;
   background-color: #2d3651;
-  background-image: url(../img/img-header.png);
+  background-image: url(../../img/img-header.png);
   background-position: 50% 50%;
   background-size: cover;
   -ms-flex-line-pack: center;
@@ -1059,7 +1059,7 @@ h3 {
   -ms-flex-pack: center;
       justify-content: center;
   margin-bottom: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
 
