@@ -533,7 +533,6 @@ header {
   padding: 100px 0;
   color: #ffffff;
   background-color: #2d3651;
-  background-image: url(../../img/img-header.png);
   background-position: 50% 50%;
   background-size: cover;
   -ms-flex-line-pack: center;
@@ -699,11 +698,14 @@ header {
 .skill-item {
   position: relative;
   overflow: hidden;
-  background-color: #2d3651;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 20px;
+  justify-items: center;
 }
 
 .skill-item__overlay {
-  z-index: 1;
   opacity: .8;
   background-color: #2d3651;
   position: absolute;
@@ -711,6 +713,10 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
+  -webkit-transition: opacity0 0.5s;
+  -o-transition: opacity0 0.5s;
+  transition: opacity0 0.5s;
 }
 
 .skill-item__image {
@@ -721,6 +727,7 @@ header {
   transition: transform .5s, -webkit-transform .5s;
   background-position: 50% 50%;
   background-size: cover;
+  background-color: #2d3651;
   position: absolute;
   top: 0;
   right: 0;
@@ -731,6 +738,7 @@ header {
 .skill-item__title {
   z-index: 2;
   margin: 0;
+  font-size: 1.125rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -742,7 +750,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   height: 100%;
   padding: 20px;
   -webkit-transition: color .5s;
@@ -880,31 +887,33 @@ p {
   font-size: 1.125rem;
 }
 
+.form-item__input:hover::-webkit-input-placeholder,
+.form-item__input:focus::-webkit-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input:hover::-moz-placeholder,
+.form-item__input:focus::-moz-placeholder {
+  color: #637588;
+}
+
+.form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
+  color: #637588;
+}
+
 .form-item__input hover,
 .form-item__input focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-.form-item__input::-webkit-input-placeholder {
-  color: #637588;
-}
-
-.form-item__input::-moz-placeholder {
-  color: #637588;
-}
-
-.form-item__input:-ms-input-placeholder {
-  color: #637588;
-}
-
-.form-item__input::-ms-input-placeholder {
-  color: #637588;
-}
-
-.form-item__input::placeholder {
-  color: #637588;
 }
 
 .form .btn--accent {
@@ -1059,7 +1068,7 @@ h3 {
   -ms-flex-pack: center;
       justify-content: center;
   margin-bottom: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
 
@@ -1099,8 +1108,7 @@ h3 {
 
 @media (min-width: 576px) {
   .skills {
-    margin-bottom: 30px;
-    padding: 10px;
+    padding: 10px 10px 40px;
   }
   .skills__button {
     display: -webkit-box;
