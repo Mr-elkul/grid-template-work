@@ -42,18 +42,25 @@
   background-color: rgba($color-light, 0.05);
   font-size: 1.125rem;
 
-  &:hover::placeholder,
-  &:focus::placeholder{
+  &:hover,
+  &:focus {
+    border: 2px solid rgba($color-light, 0.15);
+    border-bottom-color: $color-light;
+    background-color: rgba($color-light, 0.15);
+  }
+
+  &::placeholder,
+  &::placeholder{
     color: $color-gray;
   }
 
 
-  hover,
-  focus {
-    border-color: rgba($color-light, 0.15);
-    border-bottom-color: $color-light;
-    background-color: rgba($color-light, 0.15);
-  }
+  //hover,
+  //focus {
+  //  border-color: rgba($color-light, 0.15);
+  //  border-bottom-color: $color-light;
+  //  background-color: rgba($color-light, 0.15);
+  //}
 
 
   }
@@ -95,4 +102,6 @@
   overflow: visible;
 }
 
-
+input:focus {
+  outline: none;
+}
